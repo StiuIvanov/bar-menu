@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header>
+    <nav th:replace="fragments/commons::navMenu"></nav>
+</header>
+
+<main>
+
+
+    <h1 class="text-center titleMenu">Scotch Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${scotchWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Irish Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${irishWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">American Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${americanWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Single Malt Scotch Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${singleMaltScotchWhiskyWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Japanese Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${japaneseWhiskyWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Gin</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${gin}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Vodka</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${vodka}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Cognac And Brendy</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${cognacAndBrendy}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Rum</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${rum}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Tequila</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${tequila}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Rakia</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${rakia}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Whiskey Cocktails</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${whiskeyCocktails}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Gin Cocktails</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${ginCocktails}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Vodka Cocktails</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${vodkaCocktails}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Tequila Cocktails</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${tequilaCocktails}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Brandy Cocktails</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${brandyCocktails}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Schroedinger Cocktails</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${schroedingerCocktails}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Beer</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${beer}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Wine Glass</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${wineGlass}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">White Wine Glass</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${whiteWineGlass}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Red Wine</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${redWineGlass}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Rose</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${roseWineGlass}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Non Alcoholic</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${nonAlcoholic}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Hot Beverages</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${hotBeverages}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Nuts</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${nuts}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+    <h1 class="text-center titleMenu">Menu</h1>
+    <table class="table table-sm">
+        <tbody>
+        <tr>
+            <td><strong> Флам / Ellsässer Flammkuchen</strong></td>
+        </tr>
+        <th:block th:each="w : ${menu}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+  <br><br>
+
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+<script th:replace="fragments/commons::bsbundle"></script>
+</body>
+</html>

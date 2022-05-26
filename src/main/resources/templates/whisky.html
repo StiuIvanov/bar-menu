@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header>
+    <nav th:replace="fragments/commons::navMenu"></nav>
+</header>
+
+<main>
+
+
+    <h1 class="text-center titleMenu">Scotch Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${scotchWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Irish Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${irishWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">American Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${americanWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Single Malt Scotch Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${singleMaltScotchWhiskyWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Japanese Whisky</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${japaneseWhiskyWhiskeys}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <br><br>
+
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+<script th:replace="fragments/commons::bsbundle"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header>
+    <nav th:replace="fragments/commons::navMenu"></nav>
+
+</header>
+<main>
+
+    <ul class="text-center list-group list-group-flush">
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/liquors}">Liquors</a></li>
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/beer}">Beer</a></li>
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/cocktails}">Cocktails</a></li>
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/wine}">Wine</a></li>
+    </ul>
+
+
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+<script th:replace="fragments/commons::bsbundle"></script>
+</body>
+</html>

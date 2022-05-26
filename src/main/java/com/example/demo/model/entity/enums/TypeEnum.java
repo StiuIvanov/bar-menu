@@ -1,0 +1,30 @@
+package com.example.demo.model.entity.enums;
+
+public enum TypeEnum {
+    ScotchWhisky,
+    IrishWhisky,
+    AmericanWhisky,
+    SingleMaltScotchWhisky,
+    JapaneseWhisky,
+    Gin,
+    Vodka,
+    CognacAndBrendy,
+    Rum,
+    Tequila,
+    Rakia,
+    WhiskeyCocktails,
+    GinCocktails,
+    VodkaCocktails,
+    TequilaCocktails,
+    BrandyCocktails,
+    SchroedingerCocktails,
+    Beer,
+    WineGlass,
+    WhiteWine,
+    RedWine,
+    Rose,
+    NonAlcoholic,
+    HotBeverages,
+    Nuts,
+    Menu
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header>
+    <nav th:replace="fragments/commons::navMenu"></nav>
+
+</header>
+<main>
+    <h1 class="myLinkList text-center">Welcome to Schroedinger<span sec:authorize="isAuthenticated()" sec:authentication="name"></span></h1>
+<!--    <div class="container bg-blur rounded mt-5">-->
+<!--        <hr class="my-3 bg-white w-50"/>-->
+<!--        <p class="h4"></p>-->
+<!--        <hr class="my-3 bg-white w-75"/>-->
+<!--        <a class="text-center" th:href="@{/full-menu}">Full Menu</a>-->
+<!--        <a class="text-center" th:href="@{/users/login}">Food</a>-->
+<!--        <a class="text-center" th:href="@{/users/login}">Deserts</a>-->
+<!--    </div>-->
+
+    <br><br>
+    <ul class="text-center list-group list-group-flush">
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/full-menu}">Full Menu</a></li>
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/alcohol-menu}">Alcohol</a></li>
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/food}">Food</a></li>
+        <li class="list-group-item"><a class="text-center myLinkList" th:href="@{/non-alcoholic}">Non Alcoholic</a></li>
+
+    </ul>
+
+
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+<script th:replace="fragments/commons::bsbundle"></script>
+</body>
+</html>

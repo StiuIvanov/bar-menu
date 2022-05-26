@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="fragments/commons::head"></head>
+<body>
+<header>
+    <nav th:replace="fragments/commons::navMenu"></nav>
+</header>
+
+<main>
+
+    <h1 class="text-center titleMenu">Menu</h1>
+    <table class="table table-sm">
+        <tbody>
+        <tr>
+            <td><strong> Флам / Ellsässer Flammkuchen</strong></td>
+        </tr>
+        <th:block th:each="w : ${menu}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+    <h1 class="text-center titleMenu">Nuts</h1>
+    <table class="table table-sm">
+        <tbody>
+        <th:block th:each="w : ${nuts}" th:object="${w}">
+            <tr>
+                <td th:text="*{name}">name</td>
+                <td class="smallTD" th:text="|${#numbers.formatDecimal(w.price, 1,2)}лв.|">price</td>
+            </tr>
+        </th:block>
+        </tbody>
+    </table>
+
+
+
+
+
+    <hr class="my-3 bg-white w-50"/>
+    <p class="h4"></p>
+    <hr class="my-3 bg-white w-75"/>
+    <a class="text-prima" th:href="@{/alcohol}">Alcohol</a>
+
+
+</main>
+<footer th:replace="fragments/commons::footer"></footer>
+<script th:replace="fragments/commons::bsbundle"></script>
+</body>
+</html>

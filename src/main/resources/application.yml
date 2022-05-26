@@ -5,17 +5,18 @@ logging:
     org.hibernate.SQL: warn
 spring:
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    password: 1234
-    url: jdbc:mysql://localhost:3306/schroedinger?useSSL=false&createDatabaseIfNotExist=true
-    username: root
+#    driverClassName: com.mysql.cj.jdbc.Driver
+    password: ${JDBC_DATABASE_PASSWORD:}
+    url: ${JDBC_DATABASE_URL:}
+    username: ${JDBC_DATABASE_USERNAME:}
   jpa:
     hibernate:
       ddl-auto: create
     open-in-view: false
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
+#        dialect: org.hibernate.dialect.MySQL8Dialect
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: false
     defer-datasource-initialization: true
   mvc:
@@ -37,3 +38,5 @@ cloudinary:
 schedulers:
   cron: "0 0 12 1 * ?"
   cron1: "0 0 */12 ? * *"
+
+server.port: ${PORT:8080}

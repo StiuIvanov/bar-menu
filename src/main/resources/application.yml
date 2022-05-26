@@ -5,7 +5,7 @@ logging:
     org.hibernate.SQL: warn
 spring:
   datasource:
-#    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassName: org.postgresql.Driver
     password: ${JDBC_DATABASE_PASSWORD:}
     url: ${JDBC_DATABASE_URL:}
     username: ${JDBC_DATABASE_USERNAME:}
